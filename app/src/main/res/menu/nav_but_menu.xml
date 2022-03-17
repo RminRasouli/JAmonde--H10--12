@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/miHome"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home" />
+    <item
+        android:id="@+id/miFavorite"
+        android:icon="@drawable/ic_baseline_favorite_24"
+        android:title="@string/favorite" />
+    <item
+        android:id="@+id/miComingsoon"
+        android:icon="@drawable/ic_commingsoon"
+        android:title="@string/coming_soon" />
+    <item
+        android:id="@+id/miProfile"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/profile" />
+</menu>
