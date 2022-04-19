@@ -9,15 +9,18 @@ import com.example.netflixh10.R
 import com.example.netflixh10.data.MovieAdapter
 import com.example.netflixh10.data.MovieData
 import com.example.netflixh10.data.MovieViewModel
+import com.example.netflixh10.databinding.ActivityMainBinding
 import com.example.netflixh10.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
     private val viewModel: MovieViewModel by viewModels()
+    private lateinit var binding: ActivityMainBinding
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         MovieData.addMovie()
         val binding = FragmentHomeBinding.bind(view)
         val movieAdapter = MovieAdapter()
+
         binding.apply {
             recyclerViewHome.apply {
                 adapter = movieAdapter
@@ -28,7 +31,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         viewModel.movies.observe(viewLifecycleOwner) {
             movieAdapter.submitList(it)
         }
-
     }
 
 }

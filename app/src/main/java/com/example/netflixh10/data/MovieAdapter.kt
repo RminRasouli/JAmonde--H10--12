@@ -25,7 +25,6 @@ class MovieAdapter: ListAdapter<Movie, MovieAdapter.MovieViewHolder>(DiffCallbac
 
         fun bind(Movie: Movie) {
             binding.apply {
-
                 nameTextView.text = Movie.name
                 movieDiscriptionView.text = Movie.description
                 imageIcon.setImageResource(Movie.image)
